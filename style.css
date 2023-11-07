@@ -1,0 +1,701 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    /*font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;*/
+    font-family: 'Nunito', sans-serif;
+    /*font-family: 'Open Sans', sans-serif;*/
+}
+
+.logo {
+    width: 200px;
+}
+
+nav {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(0,0,0,0.3);
+    height: 5rem;
+    padding: 0px 30px;
+}
+
+.nav-right{
+    width: 60%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.nav-right ul{
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+}
+
+.nav-right ul li {
+    list-style-type: none;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    padding: 20px;
+}
+
+main {
+   /* max-width: 1400px;*/
+   display: flex;
+   justify-content: center;
+}
+
+.main-content {
+    max-width: 1400px;
+    margin: 80px;
+}
+
+.check-button{
+    cursor:pointer;
+    color: white;
+    font-size: 1.6rem;
+    line-height:4rem; /* revoir */
+    display:none; 
+}
+
+#check{
+    display:none;
+}
+
+#my-email {
+    color:white;
+}
+
+.nav-link:hover{
+    background: rgba(170, 170, 170, 0.2);
+    border-radius: 3.5px;
+}
+
+header {
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    height: 450px;
+    position: relative; /* pour influencer page-title.*/
+}
+
+#service-header {
+    background-image: url("service_background.png");
+}
+
+#rv-header{
+    background-image: url("rv_background.png");
+}
+
+.header-title{
+    font-size: 60px;
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    transform: translateY(-50%);
+}
+
+
+#page-container {
+    position: relative;
+    min-height: 100vh;
+  }
+  
+  #content-wrap {
+    padding-bottom: 3.5rem;    /* Footer height */
+    background-color: #f5f5fa8f;
+  }
+  
+  footer {
+    display:flex;
+    color: white;
+    justify-content: space-between;
+    align-items:flex-end;
+    background-color: rgb(108, 156, 167);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 3.5rem;            /* Footer height */
+  }
+
+  .text-footer{
+    padding: 10px;
+}
+
+#titre-clientele{
+    font-size: 2em;
+    margin:50px 0px;
+    text-align:center;
+}
+
+.difficultes-titre{
+    text-align:center;
+    padding-bottom: 35px;
+    font-size: 28px;
+    text-shadow: 2px 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+.text-difficultes{
+    font-size:18px;
+}
+
+.difficultes-box{
+    margin:20px 50px; 
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.difficultes-box ul {
+    margin: 0 20px;
+}
+
+.difficulte-bloc{
+    padding:40px;
+    line-height:30pt;
+}
+
+
+#mod-orale, #cognition-math{
+    background-color:#3f84a5;
+    color: white;
+   /* border-radius: 10px 10px 0 0;*/
+}
+
+#mod-orale{
+    border-radius: 10px 10px 0 0;
+}
+
+#cognition-math{
+    border-radius: 0 0 10px 10px;
+}
+
+#mod-ecrite{
+    background-color: #dee8ed;
+    color: #3f84a5;
+    margin: 10px 0px;
+}
+
+
+.deroulement-container {
+    font-size: 40px;
+    background: linear-gradient(rgba(0, 0, 0, 0.60), rgba(0, 0, 0, 0.60)), url(crayons.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius:20px;
+    height: 300px;
+    display:flex;
+    align-items: center;
+    justify-content: space-around;
+    box-shadow: 5px 5px 25px #4c515761;
+}
+
+/*h2 {
+    font-size: 1.5em;
+}*/
+
+#deroulement-title{
+    color:white;
+}
+
+.deroulementText-container {
+    margin: 30px 0px;
+    font-size:16px;
+    font-weight: 400;
+    display:flex;
+    justify-content: space-between;
+}
+
+.deroulementText-container > div{
+    text-align: center;
+}
+
+.appel-box, .remiseResultats-box{
+    width:25%;
+}
+
+.eval-box{
+    width: 50%;
+}
+
+
+.titres-deroulement{
+    padding:30px 0px;
+}
+
+.description-deroulement{
+    line-height: 20pt;
+}
+
+.uppertext-service {
+    text-align: justify;
+    font-size: 18px;
+    font-weight: 300;
+    margin-bottom: 100px;
+}
+
+
+.uppertext-service, .deroulementText-container, .confirmation-text{
+    line-height: 20pt;
+    color:#777777;
+}
+
+
+#rv-main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#rv-button-container {
+    display:flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    margin-bottom:50px;
+    margin:50px;
+}
+
+#rv-button {
+    color: white;
+    font-size: 20px;
+    background-color: #78aeba;
+    text-decoration: none;
+    padding: 30px;
+    border-radius: 5px;
+    transition: 0.3s;
+    box-shadow: 5px 5px 20px #4c515752;
+    text-align:center;
+}
+
+/* FORMULAIRE */
+
+.form-title-container {
+    background-color:#78aeba;
+    border-radius: 5px 5px 0px 0px;
+    height:185px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    
+}
+
+#form-title{
+    padding:30px;
+    font-size: 40px;
+    font-weight: 600;
+    color:white;
+    font-weight: 300;
+}
+
+.form-container{
+    width: 90vw;
+    background-color:white;
+    margin: 100px 0px;
+    max-width: 900px;
+    box-shadow: 0 15px 20px #4c515736;
+    border-radius:5px;
+    
+}
+
+.form-content{
+    color:#777777;
+    margin:50px 0px;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 35px 50px;
+}
+
+.input-contact{
+    display:flex;
+    flex-direction: column;
+    width: 40%;
+    margin: 0% 5%;
+}
+
+
+.input-message{
+    display:flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 2% 5%;
+}
+
+.form-content input, textarea, #age, #scolaire{
+    margin: 10px 0px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    background-color:rgb(190 207 213 / 48%);
+    border: none;
+}
+
+.form-content input, textarea{
+    padding:15px;
+}
+
+#age, #scolaire{
+    padding:15px 10px;
+    margin-left: 15px;
+}
+
+.input-age, .input-scolaire{
+    margin: 0% 5%;
+    margin-bottom:15px;
+}
+
+.input-age input{
+    height:10px;
+    margin-left: 15px;
+}
+
+#input-phone, #input-email{
+    margin-bottom:40px;
+}
+
+.input-disponibilites {
+    display:flex;
+    flex-direction: column;
+    margin: 0% 5%;
+}
+
+.dispo-box, .dispo-box-right, .dispo-box-left{
+    display:flex;
+}
+
+.dispo-box {
+    justify-content: space-evenly;
+    font-size:14px;
+}
+
+.dispo-box label{
+    cursor: pointer;
+}
+
+#disponibilities, .dispo-box{
+    margin-bottom:20px;
+}
+
+.dispo-box-right, .dispo-box-left{
+    flex-direction: column;
+}
+
+textarea{
+    margin-top:20px;
+    height: 175px;
+    resize:none;
+}
+
+.form-footer{
+    display:flex;
+    margin: 5% 5%;
+    justify-content: space-between;
+}
+
+.agreement-box{
+    color: #77777799;
+    width: 60%;
+    display: flex;
+    align-items: center;
+}
+
+.agreement-box, #agreement-text, #agreement-checkbox{
+    cursor:pointer;
+}
+
+#agreement-checkbox{
+    margin-left: 5px;
+}
+
+#submit-button{
+  /*  margin: 50px;*/
+    color: white;
+    font-size:24px;
+    background-color: rgb(126 166 189 / 65%);
+    text-decoration: none;
+    padding: 20px;
+    width: 180px;
+    border-radius: 5px;
+    border:none;
+    transition: 0.3s;
+    box-shadow: 5px 5px 20px #4c515752;
+    cursor:default;
+    pointer-events:none;
+
+}
+
+#rv-button:hover {
+    background-color:#6c9ca7;
+}
+
+#rv-button:active {
+    background-color:#93bec7;
+}
+
+#bull-types{
+    margin-left:25pt;
+}
+
+.confirmation-text {
+    text-align: justify;
+    font-size:18px;
+    font-weight: 300;
+    color:#777777;
+    padding: 75px 75px 150px 75px;
+}
+
+/*no selection*/
+#submit-button, #rv-button, .dispo-box{
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+}
+
+.no-wrap {
+    white-space: nowrap;
+}
+
+
+
+/* Tablettes */
+@media (max-width:1280px){
+    html,body{
+        overflow-x: hidden;
+    }
+
+    /*resize nav bar*/
+    .logo{
+        width:250px;
+        margin-left: 20px;
+    }
+
+    nav {
+        position:fixed;
+        width:91%;
+        background: rgba(0,0,0,0.3);
+        padding:0px;
+        width:100vw;
+    }
+    
+    header{
+        height:35vh;
+    }
+
+    .header-title{
+        font-size: 100px;
+    }
+
+    .nav-right ul li a {
+        font-size: 60px;
+    }
+
+    .nav-right ul{
+        display: flex;
+        text-align:center;
+        flex-direction:column;
+        justify-content: space-around;
+        text-align: center;
+        position: fixed;
+        width: 100%;
+        top:0;
+        left:0;
+        height:40%;
+        padding-top: 20%;
+        padding-bottom:100vh;
+        background: rgba(0,0,0,0.9);
+        z-index: 1;
+    }
+
+    .check-button{
+        display: block;
+        position:relative;
+        right: 13px;
+        z-index: 2;
+    }
+
+    .main-content{
+        margin: 40px;
+    }
+
+    .difficultes-box {
+        margin: 20px 0;
+    }
+
+    .deroulementText-container > div {
+        text-align:left;
+        padding-bottom:20px;
+    }
+
+    .deroulementText-container {
+        flex-direction: column;
+        align-items: center;
+        margin: 30px 50px;
+    }
+
+    .appel-box, .eval-box, .remiseResultats-box {
+        width: 100%;
+        text-align:left;
+    }
+
+    #text-footer-right{
+        text-align:right;
+    }
+
+    .form-container {
+        margin: 100px 25px;
+    }
+
+    .form-content {
+        flex-direction: column;
+        padding: 35px 90px;
+    }
+
+    .form-content > div {
+        margin:0;
+        margin-bottom:0;
+    }
+
+    .dispo-box, .dispo-box-right, .dispo-box-left {
+        display: flex;
+        flex-direction: column;
+        margin-left: 15px;
+    }
+
+    .input-contact{
+        width:100%;
+        margin: 0;
+    }
+}
+
+
+
+
+/* telephones */
+
+
+@media (max-width:540px){
+
+
+    .logo{
+        margin:0;
+        width: 150px;
+    }
+
+    .header-title {
+        font-size: 45px;
+    }
+
+    .nav-right ul {
+        justify-content: space-evenly;
+    }
+
+    .nav-right ul li a{
+        font-size:20px;
+    }
+
+    .main-content{
+        margin:10px;
+    }
+
+    #titre-clientele{
+        font-size:1.5em;
+    }
+
+    .uppertext-service{
+        margin: 10px;
+        max-width: 100vw;
+        text-align: left;
+    }
+
+    .difficultes-titre{
+        padding: 15px 0px;
+    }
+
+    .difficultes-box{
+        padding: 0px 0px;
+    }
+
+    .difficultes-box ul li{
+        padding-bottom:10px;
+    }
+
+    .difficulte-bloc{
+        padding: 15px;
+        line-height: 22pt;
+    }
+
+
+    .deroulement-container{
+        margin: 30px 0px;
+        height: 25vh;
+        border-radius: 0px;
+    }
+
+    #deroulement-title{
+        font-size: 43px;
+    }
+
+    .deroulementText-container {
+        margin: 30px 20px;
+    }
+
+    #form-title {
+        text-align: center;
+    }
+
+    .dispo-box, .dispo-box > div {
+        margin:0;
+    }
+
+    .form-content {
+        padding: 0px 20px;
+    }
+
+    .form-footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .agreement-box {
+        width: 100%;
+    }
+
+    /*.deroulementText-container > div {
+        text-align: left;
+    }*/
+
+   /* nav {
+        position:fixed;
+        width:91%;
+        background: rgba(0,0,0,0.3);
+        padding:0px;
+        width:100vw;
+    }*/
+
+    /*.form-container {
+        width:100vw;
+    }*/
+
+    /*.nav-right ul{
+        display: flex;
+        text-align:center;
+        flex-direction:column;
+        justify-content: space-evenly;
+        text-align: center;
+        position: fixed;
+        width: 100%;
+        top:0;
+        left:0;
+        height:40%;
+        padding-top: 20%;
+        padding-bottom:100vh;
+        background: rgba(0,0,0,0.9);
+        z-index: 1;
+    }*/
+    
+
+}
+
