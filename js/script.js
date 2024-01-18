@@ -1,11 +1,13 @@
 /*hide nav options*/ 
-/*function ulVisibility(x) {
+function ulVisibility(x) {
   if (x.matches) { // If media query matches
     $("#ul-nav").hide();
   } else {
     $("#ul-nav").show();
+    $(".nav-left").css("visibility", "visible");
+    $("nav").css("background", "rgba(0,0,0,0.3)");
   }
-}*/
+}
 
 var x = window.matchMedia("(max-width: 1280px)")
 ulVisibility(x) // Call listener function at run time
@@ -15,15 +17,15 @@ x.addListener(ulVisibility) // Attach listener function on state changes
 // tablette or phone menu manager
 
 $("#check").change(function() {
-  if(this.checked) {
+  if(this.checked) { 
     $("#ul-nav").fadeIn(200);
     $(".nav-left").css("visibility", "hidden"); /* hiding logo */
-    $("nav").css("background", "rgba(0,0,0,0.0)");
+    $("nav").css("background", "rgba(0,0,0,0.0)"); /* hiding filter */
 
   } else {
     $("#ul-nav").fadeOut(200);
     $(".nav-left").css("visibility", "visible");
-    $("nav").css("background", "rgba(0,0,0,0.3)");
+    $("nav").css("background", "rgba(0,0,0,0.6)");
   }
 });
 
