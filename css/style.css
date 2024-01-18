@@ -75,6 +75,7 @@ main {
 
 header {
     background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
     color: white;
     height: 450px;
@@ -82,11 +83,11 @@ header {
 }
 
 #service-header {
-    background-image: url("service_background.png");
+    background-image: url('../img/service_background.png');
 }
 
 #rv-header{
-    background-image: url("rv_background.png");
+    background-image: url('../img/rv_background.png');
 }
 
 .header-title{
@@ -119,6 +120,10 @@ header {
     bottom: 0;
     width: 100%;
     height: 3.5rem;            /* Footer height */
+  }
+
+  #smaller-footer{
+    visibility:hidden;
   }
 
   .text-footer{
@@ -155,6 +160,7 @@ header {
 .difficulte-bloc{
     padding:40px;
     line-height:30pt;
+    text-align:left;
 }
 
 
@@ -181,7 +187,7 @@ header {
 
 .deroulement-container {
     font-size: 40px;
-    background: linear-gradient(rgba(0, 0, 0, 0.60), rgba(0, 0, 0, 0.60)), url(crayons.jpg);
+    background: linear-gradient(rgba(0, 0, 0, 0.60), rgba(0, 0, 0, 0.60)), url('../img/crayons.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     border-radius:20px;
@@ -191,10 +197,6 @@ header {
     justify-content: space-around;
     box-shadow: 5px 5px 25px #4c515761;
 }
-
-/*h2 {
-    font-size: 1.5em;
-}*/
 
 #deroulement-title{
     color:white;
@@ -275,7 +277,7 @@ header {
 .form-title-container {
     background-color:#78aeba;
     border-radius: 5px 5px 0px 0px;
-    height:185px;
+    height:130px;
     display: flex;
     justify-content: center;
     align-items: flex-end;
@@ -349,10 +351,6 @@ header {
 .input-age input{
     height:10px;
     margin-left: 15px;
-}
-
-#input-phone, #input-email{
-    margin-bottom:40px;
 }
 
 .input-disponibilites {
@@ -459,7 +457,7 @@ textarea{
 
 
 
-/* Tablettes */
+/*  RESIZE TABLETS  */
 @media (max-width:1280px){
     html,body{
         overflow-x: hidden;
@@ -474,28 +472,24 @@ textarea{
     nav {
         position:fixed;
         width:91%;
-        background: rgba(0,0,0,0.3);
+        background: rgba(0,0,0,0.6);
         padding:0px;
         width:100vw;
     }
     
     header{
-        height:35vh;
+        height:50vh;
     }
 
-    .header-title{
-        font-size: 100px;
-    }
-
-    .nav-right ul li a {
-        font-size: 60px;
+    .nav-right ul li a {        /* phone/tablet menu font size */ 
+        font-size: 48px;
     }
 
     .nav-right ul{
         display: flex;
         text-align:center;
         flex-direction:column;
-        justify-content: space-around;
+        justify-content: space-evenly;
         text-align: center;
         position: fixed;
         width: 100%;
@@ -511,7 +505,7 @@ textarea{
     .check-button{
         display: block;
         position:relative;
-        right: 13px;
+        right: 20px;
         z-index: 2;
     }
 
@@ -544,7 +538,7 @@ textarea{
     }
 
     .form-container {
-        margin: 100px 25px;
+        margin: 50px 25px;
     }
 
     .form-content {
@@ -567,12 +561,21 @@ textarea{
         width:100%;
         margin: 0;
     }
+
+    footer {
+        font-size: 14px;
+    }
 }
 
 
+@media (max-width:880px){
+    footer p {
+        visibility:hidden;
+    }
+}
 
 
-/* telephones */
+/* RESIZE PHONE */
 
 
 @media (max-width:540px){
@@ -653,6 +656,10 @@ textarea{
         padding: 0px 20px;
     }
 
+    .form-content > div {
+        margin-bottom: 15px;
+    }
+
     .form-footer {
         display: flex;
         flex-direction: column;
@@ -663,23 +670,22 @@ textarea{
         width: 100%;
     }
 
-    /*.deroulementText-container > div {
+    .deroulementText-container > div {
         text-align: left;
-    }*/
+    }
 
-   /* nav {
+    nav {
         position:fixed;
         width:91%;
-        background: rgba(0,0,0,0.3);
         padding:0px;
         width:100vw;
-    }*/
+    }
 
-    /*.form-container {
+    .form-container {
         width:100vw;
-    }*/
+    }
 
-    /*.nav-right ul{
+    .nav-right ul{
         display: flex;
         text-align:center;
         flex-direction:column;
@@ -694,7 +700,11 @@ textarea{
         padding-bottom:100vh;
         background: rgba(0,0,0,0.9);
         z-index: 1;
-    }*/
+    }
+
+    #rv-button {
+        padding: 20px;
+    }
     
 
 }

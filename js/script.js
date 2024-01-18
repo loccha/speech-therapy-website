@@ -1,16 +1,18 @@
 /*hide nav options*/ 
-function ulVisibility(x) {
+/*function ulVisibility(x) {
   if (x.matches) { // If media query matches
     $("#ul-nav").hide();
   } else {
     $("#ul-nav").show();
   }
-}
+}*/
 
 var x = window.matchMedia("(max-width: 1280px)")
 ulVisibility(x) // Call listener function at run time
 x.addListener(ulVisibility) // Attach listener function on state changes
 
+
+// tablette or phone menu manager
 
 $("#check").change(function() {
   if(this.checked) {
@@ -24,6 +26,7 @@ $("#check").change(function() {
     $("nav").css("background", "rgba(0,0,0,0.3)");
   }
 });
+
 
 $("#agreement-checkbox").change(function() {
   if(this.checked) {

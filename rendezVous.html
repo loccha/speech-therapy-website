@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Camille Locas Orthophoniste</title>
-    <link rel="shortcut icon" href="assets/img/logo-onglet.png">
+    <link rel="shortcut icon" href="img/logo-onglet.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600&family=Open+Sans:wght@300&display=swap" rel="stylesheet">
@@ -23,7 +23,7 @@
                 <h1 class="header-title">Prendre <span class="no-wrap">rendez-vous</span></h1>
                 <nav>
                     <div class="nav-left">
-                        <img class="logo" src="assets/img/logo.png" alt="Logo Camille Locas Orthophoniste">
+                        <img class="logo" src="img/logo.png" alt="Logo Camille Locas Orthophoniste">
                     </div>
                     <div class="nav-right">
                         <label for="check" class="check-button">
@@ -42,9 +42,9 @@
                 
                 <div class="form-container">
                     <div class="form-title-container">
-                        <h2 id="form-title">Formulaire d'évaluation</h2>
+                        <h2 id="form-title">Formulaire</h2>
                     </div>
-                    <form method="post" action="confirmation.html">
+                    <form action="send-email.php" method="post">
                         <div class="form-content">
                             <div class="input-contact">
                                 <label for="surname">Prénom</label> 
@@ -113,21 +113,21 @@
                                 <div class="dispo-box">
                                     <div class="dispo-box-left">
                                         <label>
-                                            <input type="checkbox"> Lundi: Entre 17h et 19h
+                                            <input type="checkbox" id="lundi" name="lundi"> Lundi: Entre 17h et 19h
                                         </label>
                                         <label>
-                                            <input type="checkbox"> Mardi: Entre 17h et 19h
+                                            <input type="checkbox" id="mardi" name="mardi"> Mardi: Entre 17h et 19h
                                         </label>
                                         <label>
-                                            <input type="checkbox"> Mercredi: Entre 17h et 19h
+                                            <input type="checkbox" id="mercredi" name="mercredi"> Mercredi: Entre 17h et 19h
                                         </label>
                                     </div>
                                     <div class="dispo-box-right">
                                         <label>
-                                            <input type="checkbox"> Jeudi: Entre 17h et 19h
+                                            <input type="checkbox" id="jeudi" name="jeudi"> Jeudi: Entre 17h et 19h
                                         </label>
                                         <label>
-                                            <input type="checkbox"> Vendredi: Entre 8h et 15h
+                                            <input type="checkbox" id="vendredi" name="vendredi"> Vendredi: Entre 8h et 15h
                                         </label>
                                     </div>
                                     
@@ -152,7 +152,7 @@
                                     </label>
                                 </div>
                                 <div class="button-container">
-                                    <button id="submit-button" "type ="submit" name ="submit">Envoyer</button>
+                                    <button id="submit-button" type ="submit" name ="submit">Envoyer</button>
                                 </div>
                             </div>
 
@@ -171,11 +171,10 @@
         </div>
         <footer>
             <p class="text-footer">Si vous avez des questions: <a id="my-email" href="mailto:camillelocasorthophoniste@hotmail.com">camillelocasorthophoniste@hotmail.com</a> </p>
-            <p id="text-footer-right" class="text-footer">© 2023. Camille Locas Orthophoniste. Tous droits réservés.</p>
-            <i class="fa-solid fa-envelope" style="color: #ffffff;"></i>
+            <p id="text-footer-right" class="text-footer">© 2024. Camille Locas Orthophoniste. Tous droits réservés.</p>
         </footer>
     </div>
 
-    <script type="text/javascript" src="assets/JS/script.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
 </body>
 </html>
