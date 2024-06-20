@@ -5,7 +5,7 @@ function ulVisibility(x) {
   } else {
     $("#ul-nav").show();
     $(".nav-left").css("visibility", "visible");
-    $("nav").css("background", "rgba(0,0,0,0.3)");
+    $("nav").css("background", "rgba(0,0,0,0.6)");
   }
 }
 
