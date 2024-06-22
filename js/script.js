@@ -2,10 +2,11 @@
 function ulVisibility(x) {
   if (x.matches) { // If media query matches
     $("#ul-nav").hide();
+    $("nav").css("background", "rgba(0,0,0,0.6)");
   } else {
     $("#ul-nav").show();
     $(".nav-left").css("visibility", "visible");
-    $("nav").css("background", "rgba(0,0,0,0.6)");
+    $("nav").css("background", "rgba(0,0,0,0.3)");
   }
 }
 
@@ -56,4 +57,7 @@ $("#agreement-checkbox").change(function() {
 
   }
 });
+
+const emailForm = document.getElementById("my-email");
+emailForm?.setAttribute("href", "mailto:".concat(window.atob(window.btoa("camille.orthophonie@hotmail.com"))));
 

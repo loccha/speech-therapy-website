@@ -6,6 +6,13 @@
     /*font-family: 'Open Sans', sans-serif;*/
 }
 
+a {
+    text-decoration:none;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
 .logo {
     width: 200px;
 }
@@ -106,28 +113,75 @@ header {
   }
   
   #content-wrap {
-    padding-bottom: 3.5rem;    /* Footer height */
+    /*padding-bottom: 3.5rem; */  
     background-color: #f5f5fa8f;
+    min-height:100vh;
+  }
+
+  footer{
+    background-color: rgb(108, 156, 167);
+    position: sticky;
+    top:100%;
+    width: 100%;
+    bottom: 0;
+    height: 4rem;
+  }
+
+  #footer-enveloppe{
+    font-size: 20px;
   }
   
-  footer {
+  .wide-footer {
     display:flex;
     color: white;
     justify-content: space-between;
     align-items:flex-end;
-    background-color: rgb(108, 156, 167);
     position: absolute;
     bottom: 0;
     width: 100%;
-    height: 3.5rem;            /* Footer height */
+    /*height: 3.5rem;  */          
   }
 
-  #smaller-footer{
+  .small-footer{
     visibility:hidden;
+    display:flex;
+        color: white;
+        background-color: rgb(108, 156, 167);
+        justify-content: space-between;
+        align-items:flex-end;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
   }
 
-  .text-footer{
+  .wide-footer p {
     padding: 10px;
+  }
+
+  .small-footer p {
+    font-size: 18px;
+    padding: 10px;
+  }
+
+  #footer-enveloppe{
+    padding-right: 6px;
+  }
+
+  /*.text-wide-footer-left{
+    width:50%;
+  }*/
+  .text-wide-footer-right{
+    width:60%;
+    text-align:right;
+  }
+
+  .text-small-footer-left{
+    width:60%;
+}
+
+  .text-small-footer-right{
+    width:40%;
+    text-align:right;
 }
 
 #titre-clientele{
@@ -533,10 +587,6 @@ textarea{
         text-align:left;
     }
 
-    #text-footer-right{
-        text-align:right;
-    }
-
     .form-container {
         margin: 50px 25px;
     }
@@ -561,16 +611,16 @@ textarea{
         width:100%;
         margin: 0;
     }
-
-    footer {
-        font-size: 14px;
-    }
 }
 
 
-@media (max-width:880px){
-    footer p {
+@media (max-width:830px){
+    .wide-footer {
         visibility:hidden;
+    }
+    .small-footer{
+        visibility:visible;
+        /*height: 3.5rem;  */
     }
 }
 
@@ -579,6 +629,10 @@ textarea{
 
 
 @media (max-width:540px){
+
+    nav{
+        background: rgba(0,0,0,0.6);
+    }
 
 
     .logo{

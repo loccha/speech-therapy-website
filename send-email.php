@@ -1,31 +1,72 @@
 <?php
 
-$name = $_POST["name"];
-$email = $_POST["email"];
-
-require "vendor/autoload.php"
-
 use PHPMailer\PHPMailer\PHPMailer;
-use PHPmailer\PHPMailer\SMTP;
+use PHPMailer\PHPMailer\Exception;
+use PHPMailer\PHPMailer\SMTP;
+
+require 'vendor/autoload.php';
+
+$surname = $_POST["surname"];
+$name = $_POST["name"];
+$child_surname = $_POST["child-surname"];
+$child_name = $_POST["child-name"];
+$phone = $_POST["phone"];
+$email = $_POST["email"];
+$age = $_POST["age"];
+$scolaire = $_POST["scolaire"];
+$lundi = isset($_POST["lundi"]) ? 'Lundi: disponible' : 'Lundi: indisponible';
+$mardi = isset($_POST["mardi"]) ? 'Mardi: disponible': 'Mardi: indisponible';
+$mercredi = isset($_POST["mercredi"]) ? 'Mercredi: disponibile': 'Mercredi: indisponible';
+$jeudi = isset($_POST["jeudi"]) ? 'Jeudi: disponibile': 'Jeudi: indisponible';
+$vendredi = isset($_POST["vendredi"]) ? 'Vendredi: disponibile': 'Vendredi: indisponible'; 
+$message = $_POST["message"];
+
+
 
 $mail = new PHPMailer(true);
 
-$mail->isSMTP();
-$mail->SMTPAuth = true;
+try {
+    $mail->SMTPDebug = 0;
+    $mail->isSMTP();
+    $mail->Host = 'smtp-mail.outlook.com';
+    $mail->SMTPAuth = true;
+    $mail->Username = 'rv-clorthophoniste@outlook.com'; 
+    $mail->Password = 'mOedcno2724%'; 
+    $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+    $mail->Port = 587;
 
-$mail->Host = "smtp-mail.outlook.com"
-$mail->SMTPSecure = PHPMAILER::ENCRYPTION_STARTTLS;
-$mail->Port = 587;
+    $mail->CharSet = PHPMailer::CHARSET_UTF8;
 
-$mail->Username = "charlotte.locas@hotmail.com"
-$mail->Password = "sjmadtc310514:)"
+    //send from
+    $mail->setFrom('rv-clorthophoniste@outlook.com', "CL Orthophoniste");
 
-$mail->setForm($email, $name);
-$mail->addAddress("charlotte.locas@hotmail.com", "Charlotte");
+    //dest address
+    $mail->addAddress('charlotte.locas@hotmail.com', 'Charlotte');
+    //$mail->addAddress('camillelocasorthophoniste@hotmail.com', 'Camille');
 
-$mail->Subject = "New mail";
-$mail->Body = "This is a test";
 
-$mail->send();
+    $mail->isHTML(true);
+    $mail->Subject = 'Nouvelle demande de rendez-vous';
+    $mail->Body    = '<b>Prénom: </b>'. $surname .' <br>
+                      <b>Nom: </b>'. $name .'<br>
+                      <b>Prénom de l\'enfant: </b> '. $child_surname .'<br>
+                      <b>Nom de l\'enfant: </b>'. $child_name .'<br>
+                      <b>Âge de l\'enfant: </b> '. $age .' <br>
+                      <b>Niveau de scolarité: </b> '. $scolaire .'<br>
+                      <b>Numéro de téléphone: </b>'. $phone .'<br>
+                      <b>Adresse courriel: </b>' . $email . '<br><br> 
+                      <b>Disponibilités: </b><br>' 
+                        . $lundi . '<br>' . $mardi . '<br>' . $mercredi . '<br>' . $jeudi . '<br>' . $vendredi . '<br><br>
+                      <b>Inquiétudes: </b> '. $message .'<br>';
 
-echo "email sent";
+                
+    $mail->send();
+
+    header("Location: confirmation.html");
+    die();
+
+
+} catch (Exception $e) {
+    echo "Échec de l'envoi du formulaire. Veuillez réessayer plus tard.";
+}
+?>
