@@ -13,6 +13,10 @@ a {
     justify-content: flex-start;
 }
 
+.nav-link{
+    justify-content:flex-end;
+}
+
 .logo {
     width: 200px;
 }
@@ -185,9 +189,10 @@ header {
 }
 
 #titre-clientele{
-    font-size: 2em;
+    font-size: 1.5em;
     margin:50px 0px;
     text-align:center;
+    line-height:60pt;
 }
 
 .difficultes-titre{
@@ -239,8 +244,10 @@ header {
 }
 
 
-.deroulement-container {
+.banniere-titre-container {
     font-size: 40px;
+    color:white;
+    margin: 100px 0px 100px 0px;
     background: linear-gradient(rgba(0, 0, 0, 0.60), rgba(0, 0, 0, 0.60)), url('../img/crayons.jpg');
     background-size: cover;
     background-repeat: no-repeat;
@@ -649,7 +656,7 @@ textarea{
     }
 
     .nav-right ul li a{
-        font-size:20px;
+        font-size:27px;
     }
 
     .main-content{
@@ -658,6 +665,7 @@ textarea{
 
     #titre-clientele{
         font-size:1.5em;
+        line-height:40pt;
     }
 
     .uppertext-service{

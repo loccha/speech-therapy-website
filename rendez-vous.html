@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Camille Locas Orthophoniste</title>
+    <link rel="shortcut icon" href="img/logo-onglet.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600&family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/4dc11fafd2.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    
+</head>
+<body>
+
+    <div id="page-container"> 
+        <div id="content-wrap">
+
+            <header id="rv-header">
+                <h1 class="header-title">Prendre <span class="no-wrap">rendez-vous</span></h1>
+                <nav>
+                    <div class="nav-left">
+                        <img class="logo" src="img/logo.png" alt="Logo Camille Locas Orthophoniste">
+                    </div>
+                    <div class="nav-right">
+                        <label for="check" class="check-button">
+                            <i class="fa-solid fa-bars"></i>
+                        </label>
+                        <input type="checkbox" id="check">
+                        <ul id="ul-nav">
+                            <li><a class="nav-link" href="index.html">Services</a></li>
+                            <li><a class="nav-link" href="rendez-vous.html">Prendre Rendez-Vous</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </header>
+
+            <main id="rv-main">
+                
+                <div class="form-container">
+                    <div class="form-title-container">
+                        <h2 id="form-title">Formulaire</h2>
+                    </div>
+                    <form action="send-email.php" method="post">
+                        <div class="form-content">
+                            <div class="input-contact">
+                                <label for="surname">Prénom</label> 
+                                <input type="text" id="surname" name="surname" required placeholder="Votre réponse" pattern="^[A-Za-z]{2,50}$" maxlength="50">
+                            </div>
+    
+                            <div class="input-contact">
+                                <label for="name">Nom</label> 
+                                <input type="text" id="name" name="name" required placeholder="Votre réponse" pattern="^[A-Za-z]{2,50}$" maxlength="50">
+                            </div>
+    
+                            <div class="input-contact">
+                                <label for="child-surname">Prénom de l'enfant</label>
+                                <input type="text" id="child-surname" name="child-surname" required placeholder="Votre réponse" pattern="^[A-Za-z]{2,50}$" maxlength="50">
+                            </div>
+    
+                            <div class="input-contact">
+                                <label for="child-name">Nom de l'enfant</label>
+                                <input type="text" id="child-name" name="child-name" required placeholder="Votre réponse" pattern="^[A-Za-z]{2,50}$" maxlength="50">
+    
+                            </div>
+    
+                            <div class="input-contact" id="input-phone">
+                                <label for="phone">Numéro de téléphone</label>
+                                <input type="text" id="phone" name="phone" required placeholder="(###) ###-####" pattern="^.{7,18}$" maxlength="18">
+                            </div>
+    
+                            <div class="input-contact" id="input-email">
+                                <label for="email">Adresse courriel</label>
+                                <input type="text" id="email" name="email" required placeholder="exemple@exemple.com" pattern = "^[a-zA-Z0-9]+@[a-zA-Z]+\.[a-zA-Z]{2,4}$" maxlength="100">
+                            </div>
+    
+                            <div class="input-age">
+                                <label for="age">Quel est l'âge de votre enfant?</label>                                 
+                                <select name="age" id="age">
+                                    <option value="8">8 ans</option>
+                                    <option value="9">9 ans</option>
+                                    <option value="10">10 ans</option>
+                                    <option value="11">11 ans</option>
+                                    <option value="12">12 ans</option>
+                                    <option value="13">13 ans</option>
+                                    <option value="14">14 ans</option>
+                                    <option value="15">15 ans</option>
+                                </select>
+                            </div>
+
+                            <div class="input-scolaire">
+                                <label for="scolaire">Quel est le niveau scolaire de votre enfant?</label>                                 
+                                <select name="scolaire" id="scolaire">
+                                    <option value="prim-3">Primaire - 3e année</option>
+                                    <option value="prim-4">Primaire - 4e année</option>
+                                    <option value="prim-5">Primaire - 5e année</option>
+                                    <option value="prim-6">Primaire - 6e année</option>
+                                    <option value="sec-1">Secondaire - 1e année</option>
+                                    <option value="sec-2">Secondaire - 2e année</option>
+                                    <option value="sec-3">Secondaire - 3e année</option>
+                                </select>
+                            </div>
+
+                            <div class="input-disponibilites">
+                                <label for="disponibilites" id="disponibilities">
+                                    Afin d'obtenir un portrait de l'historique développemental de votre enfant ainsi que du contexte dans lequel il évolue, un appel d'une
+                                    durée d'environ 20 minutes précède la 1<sup>e</sup> rencontre d'évaluation. Veuillez indiquer ci-dessous les moments auxquels vous seriez
+                                    disponible.
+                                </label>
+                                <div class="dispo-box">
+                                    <div class="dispo-box-left">
+                                        <label>
+                                            <input type="checkbox" id="lundi" name="lundi"> Lundi: Entre 17h et 19h
+                                        </label>
+                                        <label>
+                                            <input type="checkbox" id="mardi" name="mardi"> Mardi: Entre 17h et 19h
+                                        </label>
+                                        <label>
+                                            <input type="checkbox" id="mercredi" name="mercredi"> Mercredi: Entre 17h et 19h
+                                        </label>
+                                    </div>
+                                    <div class="dispo-box-right">
+                                        <label>
+                                            <input type="checkbox" id="jeudi" name="jeudi"> Jeudi: Entre 17h et 19h
+                                        </label>
+                                        <label>
+                                            <input type="checkbox" id="vendredi" name="vendredi"> Vendredi: Entre 8h et 15h
+                                        </label>
+                                    </div>
+                                    
+                                </div>
+                                
+                                
+
+                            </div>
+    
+                            <div class="input-message">
+                                <label for="message">
+                                    Quelles sont vos inquiétudes concernant le développement du langage et/ou les apprentissages (lecture/écriture/mathématique) de votre enfant?
+                                </label> 
+                                <textarea id="message" name="message" rows="4" cols="50" required pattern="^.{2,1000}$" maxlength="1000"></textarea>
+                            </div>
+
+                            <div class="form-footer">
+                                <div class="agreement-box">
+                                    <label id="agreement-text">
+                                        Je comprends et j'accepte que l'ensemble des rencontres se dérouleront à distance sur la <b><u>plateforme Zoom.</u></b>
+                                        <input type="checkbox" id="agreement-checkbox" required>
+                                    </label>
+                                </div>
+
+                                <div class="button-container">
+                                    <button id="submit-button" type ="submit" name ="submit">Envoyer</button>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        
+
+                        
+                        
+                    </form>
+                </div>
+                
+                
+            </main>
+
+        </div>
+        <footer>
+            <div class="wide-footer">
+                <p class="text-wide-footer-left"> <a id="my-email" href=""><i id="footer-enveloppe" class="fa-solid fa-envelope"></i> M'envoyer vos questions par courriel</a> </p>
+                <p class="text-wide-footer-right" class="text-footer">© 2024. Camille Locas Orthophoniste. Tous droits réservés.</p>
+            </div>
+           
+            <div class="small-footer">
+                <p class="text-small-footer-left"> <a id="my-email" href=""><i id="footer-enveloppe" class="fa-solid fa-envelope"></i> Me contacter</a> </p>
+                <p class="text-small-footer-right" class="text-footer">© 2024</p>
+            </div>
+        
+        </footer>
+    </div>
+
+    <script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>
