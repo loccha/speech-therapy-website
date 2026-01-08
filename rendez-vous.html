@@ -12,8 +12,6 @@
     <link rel="stylesheet" href="css/style.css">
     <script src="https://kit.fontawesome.com/4dc11fafd2.js" crossorigin="anonymous"></script>
     <script type="text/javascript" src="js/jquery.js"></script>
-    
-</head>
 <body>
 
     <div id="page-container"> 
@@ -32,7 +30,7 @@
                         <input type="checkbox" id="check">
                         <ul id="ul-nav">
                             <li><a class="nav-link" href="index.html">Services</a></li>
-                            <li><a class="nav-link" href="rendez-vous.html">Prendre Rendez-Vous</a></li>
+                            <li><a class="nav-link" href="rendez-vous.html">Prendre rendez-vous</a></li>
                         </ul>
                     </div>
                 </nav>
@@ -44,26 +42,26 @@
                     <div class="form-title-container">
                         <h2 id="form-title">Formulaire</h2>
                     </div>
-                    <form action="send-email.php" method="post">
+                    <form id="rv-form" action="send-email.php" method="post">
                         <div class="form-content">
                             <div class="input-contact">
                                 <label for="surname">Prénom</label> 
-                                <input type="text" id="surname" name="surname" required placeholder="Votre réponse" pattern="^[A-Za-z]{2,50}$" maxlength="50">
+                                <input type="text" id="surname" name="surname" required placeholder="Votre réponse" pattern="^.{2,50}$" maxlength="50">
                             </div>
     
                             <div class="input-contact">
                                 <label for="name">Nom</label> 
-                                <input type="text" id="name" name="name" required placeholder="Votre réponse" pattern="^[A-Za-z]{2,50}$" maxlength="50">
+                                <input type="text" id="name" name="name" required placeholder="Votre réponse" pattern="^.{2,50}$" maxlength="50">
                             </div>
     
                             <div class="input-contact">
                                 <label for="child-surname">Prénom de l'enfant</label>
-                                <input type="text" id="child-surname" name="child-surname" required placeholder="Votre réponse" pattern="^[A-Za-z]{2,50}$" maxlength="50">
+                                <input type="text" id="child-surname" name="child-surname" required placeholder="Votre réponse" pattern="^.{2,50}$" maxlength="50">
                             </div>
     
                             <div class="input-contact">
                                 <label for="child-name">Nom de l'enfant</label>
-                                <input type="text" id="child-name" name="child-name" required placeholder="Votre réponse" pattern="^[A-Za-z]{2,50}$" maxlength="50">
+                                <input type="text" id="child-name" name="child-name" required placeholder="Votre réponse" pattern="^.{2,50}$" maxlength="50">
     
                             </div>
     
@@ -105,11 +103,11 @@
                             </div>
 
                             <div class="input-disponibilites">
-                                <label for="disponibilites" id="disponibilities">
+                                <p> 
                                     Afin d'obtenir un portrait de l'historique développemental de votre enfant ainsi que du contexte dans lequel il évolue, un appel d'une
                                     durée d'environ 20 minutes précède la 1<sup>e</sup> rencontre d'évaluation. Veuillez indiquer ci-dessous les moments auxquels vous seriez
                                     disponible.
-                                </label>
+                                </p>
                                 <div class="dispo-box">
                                     <div class="dispo-box-left">
                                         <label>
@@ -152,18 +150,18 @@
                                     </label>
                                 </div>
 
+
                                 <div class="button-container">
-                                    <button id="submit-button" type ="submit" name ="submit">Envoyer</button>
+                                    <button type="submit" id="submit-button">Envoyer</button>
                                 </div>
                             </div>
-
                         </div>
 
                         
-
-                        
-                        
                     </form>
+
+
+
                 </div>
                 
                 
@@ -185,5 +183,6 @@
     </div>
 
     <script type="text/javascript" src="js/script.js"></script>
+    
 </body>
 </html>

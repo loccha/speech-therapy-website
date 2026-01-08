@@ -30,20 +30,18 @@ try {
     $mail->isSMTP();
     $mail->Host = 'smtp-mail.outlook.com';
     $mail->SMTPAuth = true;
-    $mail->Username = 'rv-clorthophoniste@outlook.com'; 
-    $mail->Password = 'mOedcno2724%'; 
+    $mail->Username = getenv('EMAIL_SEND_USERNAME'); 
+    $mail->Password = getenv('EMAIL_SEND_PASSWORD'); 
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
     $mail->Port = 587;
 
     $mail->CharSet = PHPMailer::CHARSET_UTF8;
 
     //send from
-    $mail->setFrom('rv-clorthophoniste@outlook.com', "CL Orthophoniste");
+    $mail->setFrom(getenv('EMAIL_SEND_USERNAME'), "CL Orthophoniste");
 
     //dest address
-    $mail->addAddress('charlotte.locas@hotmail.com', 'Charlotte');
-    //$mail->addAddress('camille.orthophonie@hotmail.com', 'Camille');
-
+    $mail->addAddress(getenv('EMAIL_DEST_USERNAME'), 'Camille');
 
     $mail->isHTML(true);
     $mail->Subject = 'Nouvelle demande de rendez-vous';

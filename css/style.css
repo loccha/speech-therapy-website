@@ -171,9 +171,6 @@ header {
     padding-right: 6px;
   }
 
-  /*.text-wide-footer-left{
-    width:50%;
-  }*/
   .text-wide-footer-right{
     width:60%;
     text-align:right;
@@ -226,7 +223,6 @@ header {
 #mod-orale, #cognition-math{
     background-color:#3f84a5;
     color: white;
-   /* border-radius: 10px 10px 0 0;*/
 }
 
 #mod-orale{
@@ -505,11 +501,10 @@ textarea{
     padding: 75px 75px 150px 75px;
 }
 
-/*no selection*/
 #submit-button, #rv-button, .dispo-box{
-  -webkit-user-select: none; /* Safari */
-  -ms-user-select: none; /* IE 10 and IE 11 */
-  user-select: none; /* Standard syntax */
+  -webkit-user-select: none; 
+  -ms-user-select: none; 
+  user-select: none; 
 }
 
 .no-wrap {
@@ -518,7 +513,7 @@ textarea{
 
 
 
-/*  RESIZE TABLETS  */
+/*  RESPONSIVE TABLETS  */
 @media (max-width:1280px){
     html,body{
         overflow-x: hidden;
@@ -620,27 +615,24 @@ textarea{
     }
 }
 
-
+/* SWITCH BETWEEN WIDE AND SMALL FOOTER */
 @media (max-width:830px){
-    .wide-footer {
+    .wide-footer { 
         visibility:hidden;
     }
     .small-footer{
         visibility:visible;
-        /*height: 3.5rem;  */
     }
 }
 
 
-/* RESIZE PHONE */
-
+/* RESPONSIVE PHONE */
 
 @media (max-width:540px){
 
     nav{
         background: rgba(0,0,0,0.6);
     }
-
 
     .logo{
         margin:0;
@@ -649,6 +641,10 @@ textarea{
 
     .header-title {
         font-size: 45px;
+    }
+
+    .banniere-titre-container{
+        font-size:32px;
     }
 
     .nav-right ul {
@@ -660,7 +656,7 @@ textarea{
     }
 
     .main-content{
-        margin:10px;
+        margin:0;
     }
 
     #titre-clientele{
@@ -669,7 +665,7 @@ textarea{
     }
 
     .uppertext-service{
-        margin: 10px;
+        margin: 10px 0px;
         max-width: 100vw;
         text-align: left;
     }
@@ -680,6 +676,7 @@ textarea{
 
     .difficultes-box{
         padding: 0px 0px;
+        margin: 20px 10px;
     }
 
     .difficultes-box ul li{

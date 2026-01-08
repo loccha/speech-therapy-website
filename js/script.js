@@ -58,6 +58,12 @@ $("#agreement-checkbox").change(function() {
   }
 });
 
+//reveal email when page is charged
 const emailForm = document.getElementById("my-email");
 emailForm?.setAttribute("href", "mailto:".concat(window.atob(window.btoa("camille.orthophonie@hotmail.com"))));
+
+
+
+
+
 
