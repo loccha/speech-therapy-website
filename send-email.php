@@ -21,27 +21,30 @@ $jeudi = isset($_POST["jeudi"]) ? 'Jeudi: disponibile': 'Jeudi: indisponible';
 $vendredi = isset($_POST["vendredi"]) ? 'Vendredi: disponibile': 'Vendredi: indisponible'; 
 $message = htmlspecialchars($_POST["message"], ENT_QUOTES, 'UTF-8');
 
-
+$send_username = getenv('EMAIL_SEND_USERNAME');
+$send_password = getenv('EMAIL_SEND_PASSWORD');
+$dest_username = getenv('EMAIL_DEST_USERNAME');
 
 $mail = new PHPMailer(true);
 
 try {
     $mail->SMTPDebug = 0;
     $mail->isSMTP();
-    $mail->Host = 'smtp-mail.outlook.com';
+    $mail->Host = 'smtp.gmail.com';
     $mail->SMTPAuth = true;
-    $mail->Username = getenv('EMAIL_SEND_USERNAME'); 
-    $mail->Password = getenv('EMAIL_SEND_PASSWORD'); 
+    $mail->Username = $send_username; 
+    $mail->Password = $send_password; 
+
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
     $mail->Port = 587;
 
     $mail->CharSet = PHPMailer::CHARSET_UTF8;
 
-    //send from
-    $mail->setFrom(getenv('EMAIL_SEND_USERNAME'), "CL Orthophoniste");
+    // From
+    $mail->setFrom($send_username, "CL Orthophoniste");
 
-    //dest address
-    $mail->addAddress(getenv('EMAIL_DEST_USERNAME'), 'Camille');
+    // Dest
+    $mail->addAddress($dest_username, 'Camille');
 
     $mail->isHTML(true);
     $mail->Subject = 'Nouvelle demande de rendez-vous';
@@ -57,12 +60,10 @@ try {
                         . $lundi . '<br>' . $mardi . '<br>' . $mercredi . '<br>' . $jeudi . '<br>' . $vendredi . '<br><br>
                       <b>Inquiétudes: </b> '. $message .'<br>';
 
-                
     $mail->send();
 
     header("Location: confirmation.html");
     die();
-
 
 } catch (Exception $e) {
     echo "Échec de l'envoi du formulaire. Veuillez réessayer plus tard.";
