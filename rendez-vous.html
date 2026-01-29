@@ -72,7 +72,7 @@
     
                             <div class="input-contact" id="input-email">
                                 <label for="email">Adresse courriel</label>
-                                <input type="text" id="email" name="email" required placeholder="exemple@exemple.com" pattern = "^[a-zA-Z0-9]+@[a-zA-Z]+\.[a-zA-Z]{2,4}$" maxlength="100">
+                                <input type="text" id="email" name="email" required placeholder="exemple@exemple.com" pattern = "^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$" maxlength="100">
                             </div>
     
                             <div class="input-age">
@@ -152,9 +152,12 @@
 
 
                                 <div class="button-container">
-                                    <button type="submit" id="submit-button">Envoyer</button>
+                                    <button id="submit-button" 
+                                            type ="submit">Envoyer
+                                    </button>
                                 </div>
                             </div>
+
                         </div>
 
                         
@@ -170,7 +173,7 @@
         </div>
         <footer>
             <div class="wide-footer">
-                <p class="text-wide-footer-left"> <a id="my-email" href=""><i id="footer-enveloppe" class="fa-solid fa-envelope"></i> M'envoyer vos questions par courriel</a> </p>
+                <p class="text-wide-footer-left"> <a id="my-email" href=""><i id="footer-enveloppe" class="fa-solid fa-envelope"></i> Me contacter par courriel</a> </p>
                 <p class="text-wide-footer-right" class="text-footer">© 2024. Camille Locas Orthophoniste. Tous droits réservés.</p>
             </div>
            

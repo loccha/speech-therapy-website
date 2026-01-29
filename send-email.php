@@ -2,9 +2,11 @@
 
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
-use PHPMailer\PHPMailer\SMTP;
 
-require 'vendor/autoload.php';
+require __DIR__ . '/vendor/autoload.php';
+
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+$dotenv->load();
 
 $surname = htmlspecialchars($_POST["surname"], ENT_QUOTES, 'UTF-8');
 $name = htmlspecialchars($_POST["name"], ENT_QUOTES, 'UTF-8');
@@ -21,9 +23,9 @@ $jeudi = isset($_POST["jeudi"]) ? 'Jeudi: disponibile': 'Jeudi: indisponible';
 $vendredi = isset($_POST["vendredi"]) ? 'Vendredi: disponibile': 'Vendredi: indisponible'; 
 $message = htmlspecialchars($_POST["message"], ENT_QUOTES, 'UTF-8');
 
-$send_username = getenv('EMAIL_SEND_USERNAME');
-$send_password = getenv('EMAIL_SEND_PASSWORD');
-$dest_username = getenv('EMAIL_DEST_USERNAME');
+$send_username = $_ENV['EMAIL_SEND_USERNAME'];
+$send_password = $_ENV['EMAIL_SEND_PASSWORD'];
+$dest_username = $_ENV['EMAIL_DEST_USERNAME'];
 
 $mail = new PHPMailer(true);
 
