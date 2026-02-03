@@ -15,33 +15,36 @@
 
 </head>
 <body>
+    <div class="page-wrapper">
+        <div class="content-wrapper">
 
-    <div id="page-container">
-        <div id="content-wrap">
-
-            <header id="service-header">
-                <h1 class="header-title">Services</h1>
-                <nav>
-                    <div class="nav-left">
-                        <img class="logo" src="img/logo.png" alt="Logo Camille Locas Orthophoniste">
+            <!-- Header -->
+            <header class="header header--services">
+                <h1 class="header__title">Services</h1>
+                <nav class="nav">
+                    <div class="nav__brand">
+                        <img class="nav__logo" src="img/logo.png" alt="Logo Camille Locas Orthophoniste">
                     </div>
-                    <div class="nav-right">
-                        <label for="check" class="check-button">
+                    <div class="nav__menu">
+                        <label for="nav-toggle" class="nav__toggle">
                             <i class="fa-solid fa-bars"></i>
                         </label>
-                        <input type="checkbox" id="check">
-                        <ul id="ul-nav">
-                            <li><a class="nav-link" href="index.html">Services</a></li>
-                            <li><a class="nav-link" href="rendez-vous.html">Prendre rendez-vous</a></li>
+                        <input type="checkbox" id="nav-toggle" class="nav__checkbox">
+                        <ul class="nav__list">
+                            <li><a class="nav__item" href="index.html">Services</a></li>
+                            <li><a class="nav__item" href="rendez-vous.html">Prendre rendez-vous</a></li>
                         </ul>
                     </div>
                 </nav>
             </header>
            
-            <main>
-                <div class="main-content">
-                    <div class="uppertext-service">
-                        <p>
+
+            <!-- Main Content -->
+            <main class="main">
+                <div class="page-content">
+                    <!--Introduction section-->
+                    <section class="section">
+                        <p class="intro-text content-text">
                             L'évaluation en orthophonie permet de mieux comprendre l'origine des difficultés 
                             d'apprentissage de votre enfant et obtenir des outils afin de soutenir le 
                             développement de la lecture, de l'écriture, 
@@ -51,94 +54,126 @@
                             progresser sur le plan des apprentissages scolaires.
                         </p> 
 
-                        <div class="banniere-titre-container">
-                            <h2 id="titre-clientele" class="titre-banniere">Clientèles prises en charge</h2>
+                        <div class="section-header">
+                            <h2 class="section-header__title">Clientèles prises en charge</h2>
                         </div>
 
-                        <p>
+                        <p class="content-text">
                             Les élèves de <b>8 à 15 ans</b> ayant de la difficulté à:
                         </p>
                         
-                        <div class="difficultes-box">
-                            <div class="difficulte-bloc" id="mod-orale">
-                                <h3 id="mod-orale-titre" class="difficultes-titre">Modalité orale du <span class="no-wrap">langage <i class="fa-regular fa-comments"></i></span></h3>
-                                <ul class="text-difficultes">
+                        <!-- Support area-->
+                        <div class="support-areas">
+                            <article class="support-area support-area--oral">
+                                <h3 class="support-area__title">
+                                    Modalité orale du <span class="no-wrap">langage <i class="fa-regular fa-comments"></i></span>
+                                </h3>
+                                <ul class="support-area__item">
                                     <li>S'exprimer (vocabulaire, structure des phrases, accès aux mots, etc.)</li>
                                     <li>Comprendre ce qu'on leur dit (compréhension des consignes, des histoires, etc.)</li>
                                 </ul>
-                            </div>
-                            <div class="difficulte-bloc" id="mod-ecrite">
-                                <h3 id="mod-ecrite-titre" class="difficultes-titre">Modalité écrite du <span class ="no-wrap">langage <i class="fa-solid fa-book-open"></i></span></h3>
-                                <ul class="text-difficultes">
+                            </article>
+
+                            <article class="support-area support-area--written">
+                                <h3 class="support-area__title">
+                                    Modalité écrite du <span class ="no-wrap">langage <i class="fa-solid fa-book-open"></i></span>
+                                </h3>
+                                <ul class="support-area__item">
                                     <li>Lire et comprendre ce qu'ils lisent</li>
                                     <li>Orthographier les mots correctement</li>
                                     <li>Structurer un texte adéquatement</li>
                                     <li>Corriger efficacement un texte</li>
                                 </ul>
-                            </div>
-                            <div class="difficulte-bloc" id="cognition-math">
-                                <h3 id="cognition-math-titre" class="difficultes-titre">Cognition <span class="no-wrap">mathématique <i class="fa-solid fa-calculator"></i></span></h3>
-                                <ul class="text-difficultes">
+                            </article>
+
+                            <article class="support-area support-area--math">
+                                <h3 class="support-area__title">
+                                    Cognition <span class="no-wrap">mathématique <i class="fa-solid fa-calculator"></i></span>
+                                </h3>
+                                <ul class="support-area__item">
                                     <li>Placer des nombres ou des fractions sur une droite numérique</li>
                                     <li>Lire et écrire des nombres</li>
                                     <li>Effectuer des calculs</li>
                                     <li>Effectuer des résolutions de problèmes</li>
                                 </ul>
-                            </div>
+                            </article>
                         </div>
-                    
-
-                        <p>
+                        <p class="meeting-info content-text">
                             Les rencontres se déroulent à distance sur la plateforme Zoom.
                         </p> 
-                    </div>
                     
-            
-                    <div class="banniere-titre-container">
-                        <h2 id="deroulement-title" class="titre-banniere">Déroulement</h2>
-                    </div>
-            
-                    <div class="deroulementText-container">
-            
-                        <div class="appel-box">
-                            <h3 class="titres-deroulement">1. Appel téléphonique <i class="fa-solid fa-phone"></i></h3> 
-                            <p class="description-deroulement">Appel d'une durée d'environ 10 minutes pour clarifier le motif de consultation et fixer la date du premier rendez-vous d'évaluation</p>
+                    <!-- Process section-->
+                    <section class="section">
+                        <div class="section-header">
+                            <h2 class="section-header__title">Déroulement</h2>
                         </div>
-                        <div class="eval-box">
-                            <h3 class="titres-deroulement">2. Évaluation <i class="fa-solid fa-desktop"></i></h3>
-                                <ul>Modalité orale du langage : <span class="no-wrap">Environ 3 rencontres de 1h</span></ul>
-                                <ul>Modalité orale et écrite du langage : <span class="no-wrap">Environ 6 rencontres de 1h</span></ul>
-                                <ul>Mathématique : <span class="no-wrap">Environ 4 rencontres de 1h</span></ul>
-                                <ul>Le tarif est de 230$/h.</ul>
+                
+                        <div class="process">
+                            <article class="process__step process__step--call">
+                                <h3 class="process__title">
+                                    1. Appel téléphonique <i class="fa-solid fa-phone"></i>
+                                </h3> 
+                                <p class="process__item content-text">
+                                    Appel d'une durée d'environ 10 minutes pour clarifier le motif de consultation et fixer la date du premier rendez-vous d'évaluation
+                                </p>
+                            </article>
+
+                            <article class="process__step process__step--eval">
+                                <h3 class="process__title">
+                                    2. Évaluation <i class="fa-solid fa-desktop"></i>
+                                </h3>
+                                <ul class="process__item content-text">
+                                    <li>Modalité orale du langage : <span class="no-wrap">Environ 3 rencontres de 1h</span></li>
+                                    <li>Modalité orale et écrite du langage : <span class="no-wrap">Environ 6 rencontres de 1h</span></li>
+                                    <li>Mathématique : <span class="no-wrap">Environ 4 rencontres de 1h</span></li>
+                                    <li>Le tarif est de 230$/h.</li>
+                                </ul>
+                            </article>
+                
+                            <article class="process__step process__step--meeting">
+                                <h3 class="process__title">
+                                    3. Remise des résultats <i class="fa-solid fa-phone"></i> <i class="fa-solid fa-desktop"></i>
+                                </h3>
+                                <p class="process__item content-text">
+                                    Rencontre gratuite de 20 minutes (par zoom ou par téléphone) pour vous présenter le rapport d’évaluation et les recommandations
+                                </p>
+                            </article>
                         </div>
-            
-                        <div class="remiseResultats-box">
-                            <h3 class="titres-deroulement">3. Remise des résultats <i class="fa-solid fa-phone"></i> <i class="fa-solid fa-desktop"></i></h3>
-                            <p class="description-deroulement">Rencontre gratuite de 20 minutes (par zoom ou par téléphone) pour vous présenter le rapport d’évaluation et les recommandations</p>
-                        </div>
-                    </div>
-                    <div id="rv-button-container">
-                        <a id="rv-button" href="rendez-vous.html">Prendre rendez-vous</a>
+                    </section>
+
+                    <!-- Appointement call to action -->
+                    <div class="appointment-cta">
+                        <a class="btn btn--primary" href="rendez-vous.html">Prendre <span class="no-wrap">rendez-vous</span></a>
                     </div>
                 </div>  
             </main>
         </div>
 
-        <footer>
-            <div class="wide-footer">
-                <p class="text-wide-footer-left"> <a id="my-email" href=""><i id="footer-enveloppe" class="fa-solid fa-envelope"></i> Me contacter par courriel</a> </p>
-                <p class="text-wide-footer-right" class="text-footer">© 2024. Camille Locas Orthophoniste. Tous droits réservés.</p>
+        <footer class="footer">
+            <div class="footer__wide">
+                <p class="footer__contact"> 
+                    <a class="footer__link" id="my-email" href="mailto:camille.orthophonie@hotmail.com">
+                        <i class="fa-solid fa-envelope"></i> Me contacter par courriel
+                    </a> 
+                </p>
+                <p class="footer__copyright">
+                    © 2024. Camille Locas Orthophoniste. Tous droits réservés.
+                </p>
             </div>
            
-            <div class="small-footer">
-                <p class="text-small-footer-left"> <a id="my-email" href=""><i id="footer-enveloppe" class="fa-solid fa-envelope"></i> Me contacter</a> </p>
-                <p class="text-small-footer-right" class="text-footer">© 2024</p>
+            <div class="footer__mobile">
+                <p class="footer__contact"> 
+                    <a class="footer__link" id="my-email" href="mailto:camille.orthophonie@hotmail.com">
+                        <i class="fa-solid fa-envelope"></i> Me contacter
+                    </a> 
+                </p>
+                <p class="footer__copyright">
+                    © 2024
+                </p>
             </div>
-        
         </footer>
     </div>
 
     <script type="text/javascript" src="js/script.js"></script>
 </body>
-
 </html>

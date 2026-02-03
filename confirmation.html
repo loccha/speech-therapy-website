@@ -15,56 +15,68 @@
 </head>
 
 <body>
+    <div class="page-wrapper"> 
+        <div class="content-wrapper">
 
-    <div id="page-container"> 
-        <div id="content-wrap">
-
-            <header id="rv-header">
-                <h1 class="header-title">Prendre <span class="no-wrap">rendez-vous</span></h1>
-                <nav>
-                    <div class="nav-left">
-                        <img class="logo" src="img/logo.png" alt="Logo Camille Locas Orthophoniste">
+           <!-- Header -->
+            <header class="header header--appointment">
+                <h1 class="header__title">Prendre <span class="no-wrap">rendez-vous</span></h1>
+                <nav class="nav">
+                    <div class="nav__brand">
+                        <img class="nav__logo" src="img/logo.png" alt="Logo Camille Locas Orthophoniste">
                     </div>
-                    <div class="nav-right">
-                        <label for="check" class="check-button">
+                    <div class="nav__menu">
+                        <label for="nav-toggle" class="nav__toggle">
                             <i class="fa-solid fa-bars"></i>
                         </label>
-                        <input type="checkbox" id="check">
-                        <ul id="ul-nav">
-                            <li><a class="nav-link" href="index.html">Services</a></li>
-                            <li><a class="nav-link" href="rendez-vous.html">Prendre rendez-vous</a></li>
+                        <input type="checkbox" id="nav-toggle" class="nav__checkbox">
+                        <ul class="nav__list">
+                            <li><a class="nav__item" href="index.html">Services</a></li>
+                            <li><a class="nav__item" href="rendez-vous.html">Prendre rendez-vous</a></li>
                         </ul>
                     </div>
                 </nav>
             </header>
 
-            <main>
-                <div class="confirmation-text">
-                    <h1>Confirmation</h1>
-                    <br>
-                    <p>
-                        Le formulaire a été envoyé avec succès et sera traité dans les 
-                        plus brefs délais. Vous recevrez un appel téléphonique dans les 
-                        prochaines semaines afin de clarifier le motif de consultation et 
-                        fixer la date du premier rendez-vous.
-                    </p>
+            <main class="main">
+                <div class="page-content content-text">
+                    <div class="confirmation">
+                        <h1 class="confirmation__title">Confirmation</h1><br>
+                        <p class="confirmation__message">
+                            Le formulaire a été envoyé avec succès et sera traité dans les 
+                            plus brefs délais. Vous recevrez un appel téléphonique dans les 
+                            prochaines semaines afin de clarifier le motif de consultation et 
+                            fixer la date du premier rendez-vous.
+                        </p>
+                    </div>
                 </div>
             </main>
-
         </div>
 
-        <footer>
-            <div class="wide-footer">
-                <p class="text-wide-footer-left"> <a id="my-email" href=""><i id="footer-enveloppe" class="fa-solid fa-envelope"></i> Me contacter par courriel</a> </p>
-                <p class="text-wide-footer-right" class="text-footer">© 2024. Camille Locas Orthophoniste. Tous droits réservés.</p>
+        <footer class="footer">
+            <div class="footer__wide">
+                <p class="footer__contact"> 
+                    <a class="footer__link" id="my-email" href="mailto:camille.orthophonie@hotmail.com">
+                        <i class="fa-solid fa-envelope"></i> Me contacter par courriel
+                    </a> 
+                </p>
+                <p class="footer__copyright">
+                    © 2024. Camille Locas Orthophoniste. Tous droits réservés.
+                </p>
             </div>
            
-            <div class="small-footer">
-                <p class="text-small-footer-left"> <a id="my-email" href=""><i id="footer-enveloppe" class="fa-solid fa-envelope"></i> Me contacter</a> </p>
-                <p class="text-small-footer-right" class="text-footer">© 2024</p>
+            <div class="footer__mobile">
+                <p class="footer__contact"> 
+                    <a class="footer__link" id="my-email" href="mailto:camille.orthophonie@hotmail.com">
+                        <i class="fa-solid fa-envelope"></i> Me contacter
+                    </a> 
+                </p>
+                <p class="footer__copyright">
+                    © 2024
+                </p>
             </div>
-        
         </footer>
+
     </div>
   
     <script type="text/javascript" src="js/script.js"></script>
