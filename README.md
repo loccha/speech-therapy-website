@@ -9,7 +9,7 @@ This project demonstrates responsive design, dynamic UI interactions, and secure
 - [About the Project](#about-the-project)
 - [Features](#features)
 - [Technologies Used](#technologies-used)
-- [Installation](#installation--setup)
+- [Installation](#installation)
 - [Usage](#usage)
 - [Learning Outcomes](#learning-outcomes)
 
