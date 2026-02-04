@@ -22,10 +22,10 @@
     --bp-lg: 1280px;
 }
 
+
 .no-wrap{
     white-space: nowrap;
 }
-
 /*--------------Navigation bar --------------*/
 
 .nav{
@@ -98,9 +98,16 @@
 
 
 /*---------- Principal Layout ---------------*/
+
+.page-wrapper{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
 .main{
     background-color:var(--color-bg-light);
-
+    flex:1;
     display:flex;
     align-items: center;
     justify-content: center;
