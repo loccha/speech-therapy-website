@@ -518,7 +518,7 @@
         font-size: 36px;
         display: flex;
         flex-direction:column;
-        justify-content: space-around;
+        justify-content: space-evenly;
         text-align: right;
         position: fixed;
         width: 100%;
