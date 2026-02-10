@@ -32,7 +32,7 @@ This project demonstrates practical application of web development skills includ
 ### Frontend
 - **HTML5**: Semantic markup and structure
 - **CSS3**: Custom styling with responsive design
-- **JavaScript/jQuery**: Interactive elements and form handling
+- **JavaScript/jQuery**: Interactive elements
 - **Font Awesome**: Icons for visual enhancement
 - **Google Fonts**: Typography (Nunito and Open Sans)
 
